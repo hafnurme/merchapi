@@ -1,0 +1,84 @@
+GET http://localhost:2100/users/akuapalsu@mail.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjMzODUwMDIsImV4cCI6MTY2MzM4NTAxN30.QX9RYyyNwDjTiInCisjPgmpOok8ki6ih5MDvOwkxpg4
+###
+
+
+POST  http://localhost:2100/users
+Content-Type: application/json
+
+{
+    "nama_toko": "koh toko palsu",
+    "email": "akuapalsu@mail.com",
+    "password": "autocuan99",
+    "confirm_password": "autocuan99"
+}
+
+###
+POST  http://localhost:2100/login
+Content-Type: application/json
+
+{
+    "email": "akuapalsu@mail.com",
+    "password": "autocuan99"
+}
+
+###
+GET  http://localhost:2100/token
+
+
+###
+GET  http://localhost:2100/logout
+
+
+###
+GET http://localhost:2100/product_category
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjMwNjAwMDUsImV4cCI6MTY2MzA2MTIwNX0.H3_5J308CgtrEmSoE2dECj2AnDULZjxJ-c5B9BDL7SY
+
+###
+POST http://localhost:2100/product_category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjMwNjAwMDUsImV4cCI6MTY2MzA2MTIwNX0.H3_5J308CgtrEmSoE2dECj2AnDULZjxJ-c5B9BDL7SY
+
+{
+    "nama" : "Food & Beverages"
+}
+
+###
+GET http://localhost:2100/products/11
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjM3NTAyOTEsImV4cCI6MTY2Mzc1MDMwNn0.7kCU6diXBHJugbiJa-1XIZZwc8oNfMfbNodnAYLruEk
+
+###
+POST  http://localhost:2100/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjMwNjAwMDUsImV4cCI6MTY2MzA2MTIwNX0.H3_5J308CgtrEmSoE2dECj2AnDULZjxJ-c5B9BDL7SY
+
+{
+    "nama": "Gulai",
+    "harga": 20000,
+    "description": "gulain mantap jiwa",
+    "stock": 200,
+    "userId": 1,
+    "productCategoryId": 1
+}
+###
+PUT  http://localhost:2100/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjMwNjAwMDUsImV4cCI6MTY2MzA2MTIwNX0.H3_5J308CgtrEmSoE2dECj2AnDULZjxJ-c5B9BDL7SY
+
+{
+    "id": 1,
+    "nama": "Keripik",
+    "harga": 3000,
+    "description": "Keripik rebus goreng panggang",
+    "stock": 90,
+    "productCategoryId": 1
+}
+
+### 
+DELETE http://localhost:2100/products
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjI5OTI3MjksImV4cCI6MTY2Mjk5NjMyOX0.GCuaOBHPYTwzmXoHVic8XmeuoVESC1ztxab7rA6McUU
+
+{
+    "id": 3
+}

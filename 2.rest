@@ -1,0 +1,24 @@
+GET http://localhost:2100/discussion
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOjEsIm5hbWFfdG9rbyI6ImtvaCB0b2tvIHBhbHN1IiwiZW1haWwiOiJha3VhcGFsc3VAbWFpbC5jb20iLCJpYXQiOjE2NjMxMTM5NzUsImV4cCI6MTY2MzExNTE3NX0.p05gGYmz8bG7BrO_NRNWVTjHpVJDQWDg_V_GVLWjDsY
+###
+POST http://localhost:2100/discussion
+Content-Type: application/json
+
+{
+    "message": "P Mabar",
+    "productId": 1,
+    "userId": 1
+}
+
+###
+GET http://localhost:2100/balasan
+
+###
+POST http://localhost:2100/balasan
+Content-Type: application/json
+
+{
+    "message": "Yoke",
+    "userId": 1,
+    "discussionId": 1
+}
